@@ -23,3 +23,62 @@ img{
 h4{
     color: rgb(0, 2, 149);
 }
+
+header{
+    height: 60px;
+    background-color: rgb(26, 55, 55);
+}
+.sabad{
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* css for list product in dom ========================================================================== */
+.sabad-list{
+    margin: auto;
+    margin-bottom: 20px;
+    width: 700px;
+    height: 300px;
+    border: 2px solid rgb(233, 234, 255);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+    transition: 0.7s;
+    overflow-y: auto;
+}
+.sabad-list.active{
+    height: 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.box-li{
+    background: linear-gradient(to right ,rgb(222, 224, 255) , rgb(221, 250, 255));
+    border-radius: 7px;
+}
+.delete-product{
+    cursor: pointer;
+    color: red;
+    transition: 0.5s;
+}
+.delete-product:hover{
+    transform: scale(1.3);
+    font-weight: bold;
+}
+.mdi-menu-right , .mdi-menu-left{
+    cursor: pointer;
+    font-size: 25px;
+}
+.empty{
+    color: rgb(0, 2, 149);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price{
+    color: rgb(113, 115, 240);
+}

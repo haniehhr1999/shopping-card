@@ -51,6 +51,11 @@ var obj = [
     }
 ]
 
+var sabad = document.querySelector('.sabad')
+var container = document.querySelector('.container')
+var colll = document.querySelector('.colll')
+var listProduct = document.querySelector('.list')
+var empty = document.querySelector('.empty')
 // add products to dom ======================================================================
 var row = document.querySelector('.row')
 let i 
@@ -65,3 +70,26 @@ for (i = 0; i < obj.length; i++) {
     `
     var boxesInList = document.querySelectorAll('.boxes-in-list')            
 }
+
+// click buttons ===========================================================================
+var btns = document.querySelectorAll('.btn')
+btns.forEach((btn , z) => {
+    btn.addEventListener('click' , function(){
+        
+        //add products to my basket =====================================================
+        empty.innerHTML = 'لیست محصولات شما'
+        btn.innerHTML = 'محصول افزوده شد'
+        listProduct.innerHTML += `
+            <div class="d-flex justify-content-between align-items-center box-li mb-1 pb-lg-1 pt-lg-1 ps-lg-5 pe-lg-5 ${obj[z].id}">
+                <span class="name-product">${obj[z].name}</span>
+                <span class="price-product">${obj[z].price}</span>
+                <span class="count-product d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-menu-right"></i>
+                    <span class="nums" > 1 </span> 
+                    <i class="mdi mdi-menu-left"></i>
+                </span>
+                <span class="delete-product mdi mdi-close"></span>
+            </div>
+        `
+    })
+});
