@@ -92,6 +92,15 @@ btns.forEach((btn , z) => {
             </div>
         `
 
+        //Calculate the total price ======================================================
+        var priceProducts = document.querySelectorAll('.price-product')
+        var totalProduct1 = document.querySelector('.total-box-asli')
+        var sum = 0
+        priceProducts.forEach(elem => {
+            sum += parseInt(elem.innerHTML)
+            totalProduct1.innerHTML = sum
+        });
+        
         //No access to the button after adding products ===================================
         boxesInList.forEach(oneBox => {
             if (btn.parentElement.children[1].innerHTML == oneBox.children[1].innerHTML) {
@@ -115,7 +124,7 @@ btns.forEach((btn , z) => {
                 });
             })
         })
-        
+
         //right arrow =====================================================
         var rights = document.querySelectorAll('.mdi-menu-right')
         rights.forEach((right ,i) => {
