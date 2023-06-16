@@ -100,7 +100,7 @@ btns.forEach((btn , z) => {
             sum += parseInt(elem.innerHTML)
             totalProduct1.innerHTML = sum
         });
-        
+
         //No access to the button after adding products ===================================
         boxesInList.forEach(oneBox => {
             if (btn.parentElement.children[1].innerHTML == oneBox.children[1].innerHTML) {
@@ -161,3 +161,8 @@ btns.forEach((btn , z) => {
         });
     })
 });
+// js for header =============================================================================
+var sabadListContainer = document.querySelector('.sabad-list')
+sabad.addEventListener('click' , function(){
+    sabadListContainer.classList.toggle('active')
+})
