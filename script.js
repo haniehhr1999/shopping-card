@@ -100,6 +100,22 @@ btns.forEach((btn , z) => {
             }
         });
 
+        // delete products =============================================
+        var zarbHa = document.querySelectorAll('.delete-product')
+        zarbHa.forEach( zarb =>{
+            var totalProduct1 = document.querySelector('.total-box-asli')
+            zarb.addEventListener('click' , function(){
+                totalProduct1.innerHTML = parseInt(totalProduct1.innerHTML) - parseInt(zarb.parentElement.children[1].innerHTML)
+                zarb.parentElement.remove()
+                btns.forEach(btn => {
+                    if (btn.parentElement.children[1].innerHTML == zarb.parentElement.children[0].innerHTML) {
+                        btn.innerHTML = 'افزودن به سبد خرید'
+                        btn.classList.remove('disabled')
+                    }
+                });
+            })
+        })
+        
         //right arrow =====================================================
         var rights = document.querySelectorAll('.mdi-menu-right')
         rights.forEach((right ,i) => {
