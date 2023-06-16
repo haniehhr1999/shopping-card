@@ -99,5 +99,22 @@ btns.forEach((btn , z) => {
                 btn.classList.add('disabled')
             }
         });
+
+        //right arrow =====================================================
+        var rights = document.querySelectorAll('.mdi-menu-right')
+        rights.forEach((right ,i) => {
+            right.addEventListener('click' , function(){
+                var jRight = right.parentElement.children[1].innerHTML++
+                right.parentElement.parentElement.children[1].innerHTML = (right.parentElement.parentElement.children[1].innerHTML * (jRight+1))/ jRight
+                // for sum in total price ==================================================
+                let tot = 0
+                var priceProducts = document.querySelectorAll('.price-product')
+                priceProducts.forEach(elm => {
+                    tot += parseInt(elm.innerHTML)
+                    totalProduct1.innerHTML = tot
+                    console.log(totalProduct1);
+                });         
+            })
+        });
     })
 });
