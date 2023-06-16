@@ -1,0 +1,25 @@
+/* start project =================================================================================== */
+@font-face {
+    font-family: yekan;
+    src: url(assets/Yekan.ttf);
+}
+*{
+    font-family: yekan;
+}
+body{
+    scroll-behavior: smooth;
+}
+/* css for product boxes in dom ========================================================================= */
+.box{
+    border: 2px solid rgb(214, 214, 214);
+}
+button{
+    width: 100%;
+}
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+h4{
+    color: rgb(0, 2, 149);
+}
