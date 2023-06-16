@@ -91,5 +91,13 @@ btns.forEach((btn , z) => {
                 <span class="delete-product mdi mdi-close"></span>
             </div>
         `
+
+        //No access to the button after adding products ===================================
+        boxesInList.forEach(oneBox => {
+            if (btn.parentElement.children[1].innerHTML == oneBox.children[1].innerHTML) {
+                btn.innerHTML = 'محصول افزوده شد'
+                btn.classList.add('disabled')
+            }
+        });
     })
 });
