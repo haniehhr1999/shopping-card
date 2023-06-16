@@ -116,5 +116,23 @@ btns.forEach((btn , z) => {
                 });         
             })
         });
+
+        //left arrow ============================================================
+        var lefts = document.querySelectorAll('.mdi-menu-left')
+        lefts.forEach((left ,p) => {
+            left.addEventListener('click' , function(){
+                var jLeft = left.parentElement.children[1].innerHTML--
+                left.parentElement.parentElement.children[1].innerHTML = (left.parentElement.parentElement.children[1].innerHTML *  (jLeft-1)) /  jLeft 
+                // for tafriq in total price ==================================================
+                let tot2 = 0
+                var priceProducts = document.querySelectorAll('.price-product')
+                priceProducts.forEach(elm => {
+                    tot2 += parseInt(elm.innerHTML)
+                    totalProduct1.innerHTML = tot2
+                    console.log(totalProduct1);
+
+                });                    
+            })
+        });
     })
 });
