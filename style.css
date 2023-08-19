@@ -9,9 +9,33 @@
 body{
     scroll-behavior: smooth;
 }
+.first-color{
+    color: #537188 !important;
+}
+.first-bgcolor{
+    background-color: #537188  !important;
+}
+.second-color{
+    color: #CBB279;
+}
+.second-bgcolor{
+    background-color: #CBB279 !important ;
+}
+.third-color{
+    color: #E1D4BB;
+}
+.third-bgcolor{
+    background-color: #E1D4BB  !important;
+}
+.forth-color{
+    color: #EEEEEE;
+}
+.forth-bgcolor{
+    background-color: #EEEEEE !important ;
+}
 /* css for product boxes in dom ========================================================================= */
 .box{
-    border: 2px solid rgb(214, 214, 214);
+    border: 2px solid #EEEEEE;
 }
 button{
     width: 100%;
@@ -20,14 +44,10 @@ img{
     width: 100%;
     border-radius: 5px;
 }
-h4{
+/* h4{
     color: rgb(0, 2, 149);
-}
+} */
 
-header{
-    /* height: 60px; */
-    background-color: rgb(26, 55, 55);
-}
 .sabad{
     line-height: 60px;
     color: white;
@@ -48,7 +68,7 @@ header{
     transition: 0.7s;
     z-index: 33333;
     position: absolute;
-    top: 60px;
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
     overflow-y: auto;
@@ -56,12 +76,13 @@ header{
 }
 .sabad-list.active{
     height: 0;
+    opacity: 0;
     border: 1px solid rgba(0, 0, 0, 0);
     overflow: hidden;
 }
 .close-list{
     top: 10px;
-    left: 0;
+    left: 20px;
 }
 .close-list span{
     cursor: pointer;
@@ -85,7 +106,6 @@ header{
     font-size: 25px;
 }
 .empty{
-    color: rgb(0, 2, 149);
     text-align: center;
     margin-top: 20px;
     font-size: 20px;

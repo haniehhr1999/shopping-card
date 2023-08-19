@@ -61,12 +61,12 @@ var row = document.querySelector('.product-container')
 let i 
 for (i = 0; i < obj.length; i++) {         
     row.innerHTML += `
-        <div class="col-12 col-sm-12 col-md-6 col-lg-3  ${obj[i].id}">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 px-3 ${obj[i].id}">
             <div class="box boxes-in-list py-3 px-2 rounded-3">
                 <img src="${obj[i].img}" alt="">
-                <h4 class="name mt-4 fw-bold">${obj[i].name}</h4>
+                <h4 class="name mt-4 fw-bold second-color">${obj[i].name}</h4>
                 <p class="price">${obj[i].price} هزار تومان</p>
-                <button class="btn btn-primary" onclick= "">افزودن به سبد خرید</button>
+                <button class="btn btn-primary first-bgcolor border-0" onclick= "">افزودن به سبد خرید</button>
             </div>
         </div>
     `
@@ -83,7 +83,7 @@ btns.forEach((btn , z) => {
         btn.innerHTML = 'محصول افزوده شد'
         listProduct.innerHTML += `
         <div class="row">
-            <div class="d-flex justify-content-between align-items-center box-li mb-1 px-lg-1 px-lg-2 ${obj[z].id}">
+            <div class="d-flex justify-content-between align-items-center box-li mb-1 px-3 ${obj[z].id}">
                 <span class="name-product">${obj[z].name}</span>
                 <span class="price-product">${obj[z].price}</span>
                 <span class="count-product d-flex justify-content-center align-items-center">
