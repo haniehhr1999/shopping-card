@@ -59,6 +59,14 @@ header{
     border: 1px solid rgba(0, 0, 0, 0);
     overflow: hidden;
 }
+.close-list{
+    top: 10px;
+    left: 0;
+}
+.close-list span{
+    cursor: pointer;
+    border-radius: 500px;
+}
 .box-li{
     background: linear-gradient(to right ,rgb(222, 224, 255) , rgb(221, 250, 255));
     border-radius: 7px;

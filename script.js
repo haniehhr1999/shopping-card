@@ -170,3 +170,7 @@ var sabadListContainer = document.querySelector('.sabad-list')
 sabad.addEventListener('click' , function(){
     sabadListContainer.classList.toggle('active')
 })
+var closeList = document.querySelector('.close-list')
+closeList.addEventListener('click' , function(){
+    sabadListContainer.classList.toggle('active')
+})
