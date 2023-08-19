@@ -57,15 +57,17 @@ var colll = document.querySelector('.colll')
 var listProduct = document.querySelector('.list')
 var empty = document.querySelector('.empty')
 // add products to dom ======================================================================
-var row = document.querySelector('.row')
+var row = document.querySelector('.product-container')
 let i 
 for (i = 0; i < obj.length; i++) {         
     row.innerHTML += `
-        <div class="box boxes-in-list col-md-3 col-sm-6 rounded-3 ps-md-3 pe-md-3 pt-md-4 pb-md-4 ${obj[i].id}">
-            <img src="${obj[i].img}" alt="">
-            <h4 class="name mt-4 fw-bold">${obj[i].name}</h4>
-            <p class="price">${obj[i].price} هزار تومان</p>
-            <button class="btn btn-primary" onclick= "">افزودن به سبد خرید</button>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3  ${obj[i].id}">
+            <div class="box boxes-in-list py-3 px-2 rounded-3">
+                <img src="${obj[i].img}" alt="">
+                <h4 class="name mt-4 fw-bold">${obj[i].name}</h4>
+                <p class="price">${obj[i].price} هزار تومان</p>
+                <button class="btn btn-primary" onclick= "">افزودن به سبد خرید</button>
+            </div>
         </div>
     `
     var boxesInList = document.querySelectorAll('.boxes-in-list')            
@@ -80,6 +82,7 @@ btns.forEach((btn , z) => {
         empty.innerHTML = 'لیست محصولات شما'
         btn.innerHTML = 'محصول افزوده شد'
         listProduct.innerHTML += `
+        <div class="row">
             <div class="d-flex justify-content-between align-items-center box-li mb-1 pb-lg-1 pt-lg-1 ps-lg-5 pe-lg-5 ${obj[z].id}">
                 <span class="name-product">${obj[z].name}</span>
                 <span class="price-product">${obj[z].price}</span>
@@ -90,6 +93,7 @@ btns.forEach((btn , z) => {
                 </span>
                 <span class="delete-product mdi mdi-close"></span>
             </div>
+        </div>
         `
 
         //Calculate the total price ======================================================

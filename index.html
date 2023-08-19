@@ -9,21 +9,68 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.css"
         integrity="sha512-+Zybl5OKqmaXx42ysgDdEODFRj8kLRQFy87G77NWmQxS8JMiQhDKovhffSaUuMDyaKxZOZrzouVbQMtBrUcv7w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="assets/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="sabad">سبد خرید</div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-12 col-md-6">
+                    <div>
+                        <h5 class="text-white">به فروشگاه حانیه خوش آمدید</h5>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="sabad d-flex align-items-center">
+                        <span class="material-symbols-outlined ms-3">shopping_cart</span>
+                        <span>سبد خرید</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </header>
-    <div class="sabad-list ps-lg-5 pe-lg-5">
-        <p class="empty">سبد خرید شما خالی است</p>
-        <div class="list" ></div>
-        <p class="total-box-asli text-center fw-bold"></p>
-    </div>
-    <div class="container d-flex flex-wrap">
-        <div class="row"></div>
-    </div>
+    <main class="py-5">
+
+        <div class="sabad-list active ps-lg-5 pe-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="empty">سبد خرید شما خالی است</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-evenly">
+                        <h5>قیمت کل:</h5>
+                        <p class="total-box-asli text-center fw-bold"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row product-container g-5"></div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

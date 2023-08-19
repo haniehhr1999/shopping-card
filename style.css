@@ -25,7 +25,7 @@ h4{
 }
 
 header{
-    height: 60px;
+    /* height: 60px; */
     background-color: rgb(26, 55, 55);
 }
 .sabad{
@@ -47,7 +47,13 @@ header{
     border-radius: 0 0 10px 10px;
     background-color: white;
     transition: 0.7s;
+    z-index: 33333;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .sabad-list.active{
     height: 0;
